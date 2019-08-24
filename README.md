@@ -4,7 +4,7 @@ An automated system to backup to DVD media.
 
     Ummm, why don't you just back up to the cloud?
 
-The cloud, or Other People's Computers, has the virtue of letting one believe that their data is safe in someone else's hands. Insofar as fees are paid, the company is professional and honorable, and disaster doesn't strike them, Other People's Computers is [a good backup solution](tarsnap.com).
+The cloud, or Other People's Computers, has the virtue of letting one believe that their data is safe in someone else's hands. Insofar as fees are paid, the company is professional and honorable, and disaster doesn't strike them, Other People's Computers is [a good backup solution](https://tarsnap.com).
 
 To mitigate any potential breakdown in the cloud solution, to prevent it from being a single point of failure, a secondary backup is needed, namely a local backup.
 
