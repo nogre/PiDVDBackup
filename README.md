@@ -39,3 +39,5 @@ Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I h
 ## Software
 
 [DietPi](https://dietpi.com) operating system for the Pi, which is a slimmed down Raspbian. [growisofs](https://linux.die.net/man/1/growisofs) controls the DVD burning. See the script for details.
+
+Load DietPi on the Pi. Install growisofs and its few dependencies. Create cron jobs to download your data and then burn the DVD using the shell script provided here (customize as needed). 
