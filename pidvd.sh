@@ -4,7 +4,8 @@
 # Dietpi.com for Raspberry Pi
 # apt install genisoimage growisofs lsscsi
 
-# Assume 'sr0' for the DVD+RW drive
+# lsscsi is used to find the USB device ID, needed below.
+# Assume '/dev/sr0' for the DVD+RW drive
 
 # Detect disk
 #  https://www.linuxquestions.org/questions/linux-general-1/how-can-i-detect-a-blank-dvd-473904/#post2380233
