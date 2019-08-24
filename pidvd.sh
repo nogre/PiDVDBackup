@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Copyright 2019 Noah Greenstein. MIT License.
+
 # Software installed
 # Dietpi.com for Raspberry Pi
 # apt install genisoimage growisofs lsscsi
