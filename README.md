@@ -1,4 +1,4 @@
-# Pi DVD Backup System
+# Pi DVD RAID 1 Backup System
 
 An automated system to backup to DVD media.
 
@@ -34,7 +34,7 @@ USB DVD+RW: $15
 
 DVD-R media: $16
 
-Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I had a Pi Zero W, power supply, and on the go cable from other projects already. A secondary or tertiary DVD+RW could easily be added to the system for not much more. A powered usb hub, or independently powered DVD+RWs, are also recommended to prevent power drops to the Pi when burning disks.
+Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I had a Pi Zero W, power supply, and on the go cable from other projects already. A secondary or tertiary DVD+RW could easily be added to the system, creating RAID 1, for not much more. A powered usb hub, or independently powered DVD+RWs, are also recommended to prevent power drops to the Pi when burning disks.
 
 ## Software
 
