@@ -25,9 +25,13 @@ Just as storage density has gone up, costs for media have come down. Current pri
 Microcenter prices listed for Pi and power supply; Ebay for the cable, DVD writer and media (August 2019).
 
 Raspberry Pi Zero W : $5
+
 Power Supply: $4
+
 On The Go Cable: $3
+
 USB DVD+RW: $15
+
 DVD-R media: $16
 
 Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I had a Pi Zero W, power supply, and on the go cable from other projects already. A secondary or tertiary DVD+RW (with USB hub) could easily be added to the system for not much more.
