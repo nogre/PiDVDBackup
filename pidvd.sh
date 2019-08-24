@@ -4,7 +4,7 @@
 # Dietpi.com for Raspberry Pi
 # apt install genisoimage growisofs lsscsi
 
-# lsscsi is used to find the USB device ID, needed below.
+# lsscsi is used to find the USB scsi device ID, needed below.
 # Assume '/dev/sr0' for the DVD+RW drive
 
 # Detect disk
