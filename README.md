@@ -34,7 +34,7 @@ USB DVD+RW: $15
 
 DVD-R media: $16
 
-Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I had a Pi Zero W, power supply, and on the go cable from other projects already; many other single board computers would work or this project could be added to an extant system. A secondary or tertiary DVD+RW could easily be added for not much more, creating RAID 1. A powered usb hub, or independently powered DVD+RWs, are also recommended to prevent power drops to the Pi when burning disks.
+Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I had a Pi Zero W, power supply, and on the go cable from other projects already; many other single board computers would work, or this could be installed on an extant system. A secondary or tertiary DVD+RW could easily be added for not much more, creating RAID 1. A powered usb hub, or independently powered DVD+RWs, are also recommended to prevent power drops to the Pi when burning disks.
 
 ## Software
 
