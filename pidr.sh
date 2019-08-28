@@ -27,13 +27,24 @@ fi
 tarchive="/path/to/temporary/archive.tgz"
 tar -czf $tarchive /path/to/backup/files
 
+# check if archiving was successful
+if [ ! -e $tarchive ]; then
+  echo "Archive not found!"
+  # set no archive warning
+  exit 1
+fi
+
 # Check if files are writable to DVD using growisofs
 #   https://linux.die.net/man/1/growisofs
 unset TESTRUN
 TESTRUN=$(growisofs -dry-run -Z /dev/sr0 $tarchive 2>&1)
-if [[ $TESTRUN =~ 'media is not recognized' ]]; then 
+if [[ $TESTRUN =~ 'unable to open64' ]]; then 
+  # can't open DVD+RW, can't find sr0
+  echo "unable to find DVD+RW"
+  # set no drive warning
+elif [[ $TESTRUN =~ 'media is not recognized' ]]; then 
   # not recognized if CD, DVD is finalized
-  echo "media not recognized"
+  echo "media not recognized" > $statusFile
   # set not recognized warning
 elif [[ $TESTRUN =~ 'No such file' ]]; then 
   # no file to write
