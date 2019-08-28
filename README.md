@@ -6,7 +6,7 @@ PiDR: An automated system to backup to DVD media.
 
 The cloud, or Other People's Computers, has the virtue of letting one believe that their data is safe in someone else's hands. Insofar as fees are paid, the company is professional and honorable, and disaster doesn't strike them, Other People's Computers is [a good backup solution](https://tarsnap.com).
 
-To mitigate any potential breakdown in the cloud solution, to prevent it from being a single point of failure, a secondary backup is needed, namely a local backup.
+To mitigate any potential breakdown in the cloud solution, to prevent it from being a single point of failure, a secondary backup is needed, namely a local backup (the original files themselves are not backups).
 
 Dedicated redundant local backups can cost [hundreds of dollars](https://www.crowdsupply.com/gnubee/personal-cloud-1) to [many thousands](https://www.ixsystems.com/). For my comparably tiny amounts of critical data, these systems are overkill (and out of my price range). A cobbled together version, using an old case, drives, etc., would probably work, but that could still run hundreds of dollars and fail because of the dodgy old hardware.
 
