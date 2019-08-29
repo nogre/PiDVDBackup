@@ -88,9 +88,11 @@ else
   # which prevents the automatic tray opening and closing. Instead reload the
   # disk by turning the media device off and back on (sic), as the media is
   # also loaded on start up.
-  # Get the device ID via `lsscsi -v`.
-  #   https://stackoverflow.com/a/56427483
+  # Get the device ID via `lsscsi -v`. https://stackoverflow.com/a/56427483
+  #    don't unplug immediately: not sure the DVD writer is actually finished
+  sleep 30s
   echo "0:0:0:0" > /sys/bus/scsi/drivers/sr/unbind
+  sleep 15s
   echo "0:0:0:0" > /sys/bus/scsi/drivers/sr/bind
 
   # Check if getting close to capacity of media 
