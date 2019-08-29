@@ -42,4 +42,4 @@ Grand total for the basic hardware is less that $30, plus $16 for 100 DVD-R. I h
 
 ## Instructions
 
-Load DietPi on the Pi. Install growisofs and its few dependencies. Plug the DVD+RW into the OTG cable and then into the Pi. Create cron jobs to download your data and then burn the DVD using the shell script provided here (customize as needed). 
+Load DietPi on the Pi. Install growisofs and its few dependencies. Plug the DVD+RW into the OTG cable and then into the Pi. Create cron jobs to download your data and then burn the DVD using the shell script provided here (localize as needed). 
