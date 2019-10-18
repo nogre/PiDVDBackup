@@ -37,7 +37,7 @@ fi
 # Check if files are writable to DVD using growisofs
 #   https://linux.die.net/man/1/growisofs
 unset TESTRUN
-TESTRUN=$(growisofs -dry-run -Z /dev/sr0 $tarchive 2>&1)
+TESTRUN=$(growisofs -dry-run -M /dev/sr0 $tarchive 2>&1)
 if [[ $TESTRUN =~ 'unable to open64' ]]; then 
   # can't open DVD+RW, can't find sr0
   echo "unable to find DVD+RW"
@@ -47,13 +47,17 @@ elif [[ $TESTRUN =~ 'media is not recognized' ]]; then
   echo "media not recognized" > $statusFile
   # set not recognized warning
 elif [[ $TESTRUN =~ 'No such file' ]]; then 
-  # no file to write
+  # no file to wr
   echo "no data file to burn"
   # set no file to write warning
 elif [[ $TESTRUN =~ 'is larger than' ]]; then 
   # file is too large to write
   echo "file is too large"
   # set file is too large warning
+elif [[ $TESTRUN =~ 'session would cross' ]]; then 
+  # out of space
+  echo "out of space"
+  # set out of space warning
 elif [[ $TESTRUN =~ 'to be written!' ]]; then 
   # not enough space left to write data
   echo "not enough space left on disk"
@@ -61,8 +65,8 @@ elif [[ $TESTRUN =~ 'to be written!' ]]; then
   
   # Finalize DVD?
   # growisofs -M /dev/sr0=/dev/zero
-elif [[ $TESTRUN =~ ':-\(' ]]; then
-  echo "unhappy face"
+elif [[ $TESTRUN =~ 'aborting..' ]]; then
+  echo "generic abort"
   # set generic fail warning
 else
   # No errors, burn!
@@ -106,7 +110,7 @@ else
   # Test burn
   unset TESTRUN2
   TESTRUN2=$(growisofs -dry-run -M /dev/sr0 $testFile 2>&1)
-  if [[ $TESTRUN2 =~ 'to be written!' ]]; then 
+  if [[ $TESTRUN2 =~ 'to be written!' || $TESTRUN2 =~ 'aborting..' ]]; then 
     echo "fewer than $count writes left!"
     # set running out of space warning
   fi
