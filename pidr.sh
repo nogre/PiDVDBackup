@@ -37,7 +37,7 @@ fi
 # Check if files are writable to DVD using growisofs
 #   https://linux.die.net/man/1/growisofs
 unset TESTRUN
-TESTRUN=$(growisofs -dry-run -M /dev/sr0 $tarchive 2>&1)
+TESTRUN=$(growisofs -dry-run -Z /dev/sr0 $tarchive 2>&1)
 if [[ $TESTRUN =~ 'unable to open64' ]]; then 
   # can't open DVD+RW, can't find sr0
   echo "unable to find DVD+RW"
